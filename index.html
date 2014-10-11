@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Mario Bros!</title>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="shortcut icon" href="favicon.ico">
+	<style>
+		/*img
+		{
+			left: 10px;
+			position: relative;
+			top: 360px;
+		}*/
+		.container
+		{
+			width: 100%;
+			/*width: 1600px;*/
+			background: url('images/mario_back01.jpg');
+			background-repeat: repeat-x;
+			height: 500px;
+			overflow: hidden;
+		}
+		.resaltar
+		{
+			-webkit-box-shadow: 1px -1px 32px 1px #FFECAA inset;
+    		-moz-box-shadow: 1px -1px 32px 1px #FFECAA inset;
+    		box-shadow: 1px -1px 32px 1px #FFECAA inset;
+		}
+		.flipped
+		{
+			-moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: "FlipH";
+		}
+		.caja_mario
+		{
+			position: relative;
+			height: 68px;
+			width: 55px;
+			left: 13px;
+			top: 360px;
+			background: transparent; 
+		}
+		#fireball
+		{
+			display: none;
+			position: absolute;
+			left: 35px;
+			top: 22px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg"/> -->
+		<div class="caja_mario">
+			<img src="images/Super_Mario_Bros_3.png" id="mario">
+			<img src="images/fireball.png" id="fireball">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/mario.js"></script>
+</body>
+</html>
