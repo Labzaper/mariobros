@@ -3,14 +3,16 @@
 <head>
 	<title>Super Mario Bros!</title>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 	<style>
-		/*img
+		#fireball
 		{
-			left: 10px;
-			position: relative;
-			top: 360px;
-		}*/
+			display: none;
+			position: absolute;
+			left: 35px;
+			top: 22px;
+		}
 		.container
 		{
 			width: 100%;
@@ -18,7 +20,7 @@
 			background: url('images/mario_back01.jpg');
 			background-repeat: repeat-x;
 			height: 500px;
-			overflow: hidden;
+			overflow: visible;
 		}
 		.resaltar
 		{
@@ -44,22 +46,46 @@
 			top: 360px;
 			background: transparent; 
 		}
-		#fireball
+		.escena
 		{
-			display: none;
-			position: absolute;
-			left: 35px;
-			top: 22px;
+			height: 426px;
+			vertical-align: top;
+			/*background: green;*/
+			width: 100%;
 		}
+		.escena2
+		{
+			background: blue;
+			height: 200px;
+		}
+
+		.image 
+		{
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    width: 120px;
+		    height: 120px;
+		    margin:-60px 0 0 -60px;
+		    -webkit-animation:spin 4s linear infinite;
+		    -moz-animation:spin 4s linear infinite;
+		    animation:spin 4s linear infinite;
+		}
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+		@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 	</style>
 </head>
 <body>
 	<div class="container">
-		<!-- <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg"/> -->
-		<div class="caja_mario">
-			<img src="images/Super_Mario_Bros_3.png" id="mario">
-			<img src="images/fireball.png" id="fireball">
+		<div class="escena" id="escena">
+			<!-- <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/mario.jpg"/> -->
+			<div class="caja_mario">
+				<img src="images/Super_Mario_Bros_3.png" id="mario">
+				<img src="images/fireball.png" id="fireball">
+			</div>
 		</div>
+		<!-- <div class="escena2" id="escena2"></div> -->
 	</div>
 	<script type="text/javascript" src="js/mario.js"></script>
 </body>
